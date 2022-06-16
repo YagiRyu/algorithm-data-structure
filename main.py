@@ -1,16 +1,33 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# O(log(n))
+def func2(n):
+    if n <= 1:
+        return
+    else:
+        print(n)
+        func2(n / 2)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# O(n)
+def func3(numbers):
+    for num in numbers:
+        print(num)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+# O(n * log(n))
+def func4(n):
+    for i in range(int(n)):
+        print(i, end=' ')
+    print()
+
+    if n <= 1:
+        return
+    func4(n / 2)
+
+
+# O(n**2)
+def func5(numbers):
+    for i in range(len(numbers)):
+        for j in range(len(numbers)):
+            print(numbers[i], numbers[j])
+        print()
+
